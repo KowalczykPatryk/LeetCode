@@ -18,8 +18,7 @@ public:
             unsigned int reversed = 0;
             while (x > 0)
             {   
-                int digit = x % 10;
-                reversed = reversed * 10 + digit;
+                reversed = reversed * 10 + x % 10;
                 x /= 10;
             }
             return original == reversed;
