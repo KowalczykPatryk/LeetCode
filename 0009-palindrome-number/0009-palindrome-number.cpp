@@ -16,10 +16,9 @@ public:
         {
             unsigned int original = x;
             unsigned int reversed = 0;
-            short int digit;
             while (x > 0)
             {   
-                digit = x % 10;
+                int digit = x % 10;
                 reversed = reversed * 10 + digit;
                 x /= 10;
             }
