@@ -5,8 +5,8 @@ public:
         int length = s.length();
         for (int i = 0; i < length; i++)
         {
-            int current = charToValue(s[i]);
-            int next = (i + 1 < length) ? charToValue(s[i+1]): 0;
+            unsigned short int current = charToValue(s[i]);
+            unsigned short int next = (i + 1 < length) ? charToValue(s[i+1]): 0;
             if (next > current)
             {
                 number -= current;
@@ -20,7 +20,7 @@ public:
         
     }
 private:
-    int charToValue(char c)
+    unsigned short int charToValue(char c)
     {
         switch(c)
         {
