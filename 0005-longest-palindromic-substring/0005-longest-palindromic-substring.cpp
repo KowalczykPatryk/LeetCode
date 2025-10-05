@@ -5,8 +5,10 @@ public:
         int start_index = 0;
         int end_index = 0;
         for (int i = 0; i < s.length() - 1; i++){
+            if (s.length()-i <= max_length) break; // is it worth continue checking
             for (int j = s.length() - 1; j > i; j--)
             {
+                if (j-i+1 <= max_length) break; // is it worth continue checking
                 if (s[i] == s[j] && j-i+1 > max_length)
                 {
                     //found potential palindorome to be checked
@@ -27,7 +29,6 @@ public:
                     }
                 }
             }
-
         }
         string output_string = "";
         for (int i = start_index; i <= end_index; i++)
